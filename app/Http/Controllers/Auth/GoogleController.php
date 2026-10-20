@@ -24,6 +24,7 @@ class GoogleController extends Controller
                 ->withErrors(['email' => 'Login dengan Google gagal, silakan coba lagi.']);
         }
 
+        
         $user = User::where('google_id', $google->getId())
             ->orWhere('email', $google->getEmail())
             ->first();
