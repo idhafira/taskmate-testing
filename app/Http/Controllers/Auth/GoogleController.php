@@ -25,6 +25,7 @@ class GoogleController extends Controller
         }
 
         
+        
         $user = User::where('google_id', $google->getId())
             ->orWhere('email', $google->getEmail())
             ->first();
